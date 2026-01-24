@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ATM Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="atm">
+        <h2>ATM Machine</h2>
+
+        <!-- ENTER PIN -->
+        <div id="pinSection">
+            <input type="password" id="pin" placeholder="Enter PIN">
+            <button onclick="submitPin()">Submit</button>
+
+            <p class="link">
+                New user?
+                <span onclick="showCreatePin()">Create PIN</span>
+            </p>
+        </div>
+
+        <!-- CREATE PIN -->
+        <div id="createPinSection" class="hidden">
+            <input type="password" id="newPin" placeholder="Create New PIN">
+            <button onclick="createPin()">Create PIN</button>
+
+            <p class="link">
+                Already have PIN?
+                <span onclick="showEnterPin()">Enter PIN</span>
+            </p>
+        </div>
+
+        <!-- MENU -->
+        <div id="menu" class="hidden">
+            <button onclick="checkBalance()">Check Balance</button>
+            <button onclick="withdrawMoney()">Withdraw Money</button>
+            <button onclick="depositMoney()">Deposit Money</button>
+            <button onclick="exitATM()">Exit</button>
+        </div>
+
+        <p id="output">Thank you for using ATM</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
